@@ -1,43 +1,51 @@
-<html>
-	<head>
-		<meta charset="utf-8"> 
-		<title>Aprenda AngularJS - Menu de Navegação</title>
-
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
-		<!-- Arquivo CSS principal -->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-
-		<!--[if lt IE 9]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-	</head>
-
-	<!-- A diretiva ng-app diz ao Angular que o código abaixo deve ser analisado -->
-
-	<body ng-app>
-		
-		<!-- 	O menu de navegação vai pegar o valor da variável "ativa" como uma classe. 
-		 		O $event.preventDefault() previne que a página pule quando um link é clicado -->
-
-		<nav class="{{ ativo }}" ng-click="$event.preventDefault()">
-			
-			<!-- Quando um link no menu é clicado, nós definimos a variável ativa -->
-			<a href="#" class="home" ng-click="ativo='home'">Home</a>
-			<a href="#" class="projects" ng-click="ativo='projects'">Projetos</a>
-			<a href="#" class="services" ng-click="ativo='services'">Serviços</a>
-			<a href="#" class="contact" ng-click="ativo='contact'">Contato</a>
-
-		</nav>
-
-		<!-- ng-show vai mostrar um elemento se o valor das aspas for verdadeiro, enquanto o ng-hide faz o contrário. Por causa da variável ativa não ser definida inicialmente, fará com que o primeiro parágrafo seka visível -->
-
-		<p ng-hide="ativo">Por favor, click em um item do menu</p>
-		<p ng-show="ativo">Sua Escolha <b>{{ ativo }}</b></p>
-
-		<!-- Incluindo o AngularJS do Google CDN -->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular.min.js"></script>
-
-	</body>
-
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="pt" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html lang="pt" class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="pt" class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="pt" class="no-js"> <!--<![endif]-->
+    <head>
+    	<!-- meta character set -->
+        <meta charset="utf-8">
+		<!-- Always force latest IE rendering engine or request Chrome Frame -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Dimi Antoni</title>		
+		<!-- Meta Description -->
+        <meta name="description" content="Dimi Antoni">
+        <meta name="keywords" content="web developer">
+        <meta name="author" content="Dimi Antoni">		
+		<!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">			
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>		
+		<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/main.css">
+		<!-- Modernizer Script for old Browsers -->
+	    <script src="js/modernizr-2.6.2.min.js"></script>
+    </head>	
+    <body id="body"> 	
+		<div class="container">
+			<div class="row">						
+				<div class="sec-title text-center white wow animated fadeInDown">
+					<h2>Dimi Antoni</h2>
+					<p>Web Developer</p><br>
+					<div class="sec-title text-center white wow animated fadeInDown">
+						<ul class="social-button">
+							<li class="wow animated zoomIn" data-wow-delay="0.6s"><a href="http://blog.dimiantoni.com/"><i class="fa fa-newspaper-o fa-2x"></i></a></li>
+							<li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://github.com/antonivargas"><i class="fa fa-github fa-2x"></i></a></li>						
+							<li class="wow animated zoomIn"><a href="https://br.linkedin.com/in/dimiantoni"><i class="fa fa-linkedin fa-2x"></i></a></li>
+							<li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="http://dimiantoni.com/"><i class="fa fa-desktop fa-2x"></i></a></li>
+							<li class="wow animated zoomIn"><a href="http://dimiantoni.com/curriculo"><i class="fa fa-book fa-2x"></i></a></li>
+						</ul>
+					</div>
+					</div>
+				<div class="sec-title text-center white wow animated fadeInDown">
+					<h2>Conheça meu trabalho</h2>
+					<p>Caso queira conhecer um pouco mais sobre meu trabalho e minhas qualificações, sugiro que dê uma olhada nos links acima onde será possível acompanhar meu blog onde procuro escrever sobre temas como programação e afins, os demais links direcionam para meus perfis profissionais no github e linkedin e também para meu portfólio de projetos pessoais e um currículo web onde estão todas as minhas informações de contato.</p>
+				</div>				
+			</div>
+		</div>		
+    </body>
 </html>
